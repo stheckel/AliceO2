@@ -10,15 +10,21 @@
 
 o2_add_library(TPCQC
                SOURCES src/PID.cxx
+                       src/TracksTest.cxx
                PUBLIC_LINK_LIBRARIES O2::TPCBase)
 
-
-
 o2_target_root_dictionary(TPCQC
-                          HEADERS include/TPCQC/PID.h)
+                          HEADERS include/TPCQC/PID.h
+                                  include/TPCQC/TracksTest.h)
 
 o2_add_test(PID
             COMPONENT_NAME tpc
             PUBLIC_LINK_LIBRARIES O2::TPCQC
             SOURCES test/test_PID.cxx
+            LABELS tpc)
+
+o2_add_test(TracksTest
+            COMPONENT_NAME tpc
+            PUBLIC_LINK_LIBRARIES O2::TPCQC
+            SOURCES test/test_TracksTest.cxx
             LABELS tpc)
