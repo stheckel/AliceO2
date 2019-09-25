@@ -8,13 +8,15 @@
 // granted to it by virtue of its status as an Intergovernmental Organization
 // or submit itself to any jurisdiction.
 
-#ifdef __CLING__
+#define BOOST_TEST_MODULE Test TPC QC
+#define BOOST_TEST_MAIN
+#define BOOST_TEST_DYN_LINK
+#include <boost/test/unit_test.hpp>
+#include "DataFormatsTPC/Defs.h"
+#include "TPCQC/TracksTest.h"
+#include <cmath>
 
-#pragma link off all globals;
-#pragma link off all classes;
-#pragma link off all functions;
-
-#pragma link C++ class o2::tpc::qc::PID+;
-#pragma link C++ class o2::tpc::qc::TracksTest+;
-
-#endif
+BOOST_AUTO_TEST_CASE(ReadWriteROOTFile)
+{
+  o2::tpc::qc::TracksTest trackstest;
+}
