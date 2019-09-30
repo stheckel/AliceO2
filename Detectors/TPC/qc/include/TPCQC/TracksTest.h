@@ -13,8 +13,8 @@
 /// @author Stefan Heckel, sheckel@cern.ch
 ///
 
-#ifndef AliceO2_TPC_ROC_H
-#define AliceO2_TPC_ROC_H
+#ifndef AliceO2_TPC_TRACKSTEST_H
+#define AliceO2_TPC_TRACKSTEST_H
 
 //root includes
 #include "TH1F.h"
